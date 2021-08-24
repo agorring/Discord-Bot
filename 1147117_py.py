@@ -1,15 +1,12 @@
 # bot.py
 """
 Author: Adam M. Gorring
-Student Number: 1147117
 
 If the pip package manager is available on the device, the following command in the console will install the discord.py package required to run the file.
     pip3 install -U discord.py
 
 To execute the file, enter "python3" followed by the file path into the console
 
-To join the Discord server and interact with the bot, use the invite link below.
-https://discord.gg/DKgWAk8r9N
 """
 import discord
 import random
@@ -49,7 +46,7 @@ async def on_ready():
 # SECTION Read CSV
 # Loops through lines in the dataset using csv reader. Every line (except for the column names) is appended to QaList as an instance of QA.
 QaList = []
-with open(r'C:\Users\adamg\OneDrive\Desktop\Discord\QA.csv', mode='r') as csv_file:
+with open('QA.csv', mode='r') as csv_file:
     csv_reader = csv.DictReader(csv_file)
     line_count = 0
     
@@ -94,5 +91,5 @@ async def on_message(message):
             response = random.choice(answers)
             await message.channel.send(response)
 
-client.run("ODQxNTAzNTcwNjk1OTQ2MjUw.YJntRQ.n6OzIF8uZV5L7-XZKql8JguMKf4")
+client.run("Insert Bot Token")
 # Run using the bot's authentication token
