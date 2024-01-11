@@ -1,4 +1,4 @@
-# Discord-Bot-in-Python
+# Discord-Bot
 
 An intelligent Discord bot developed in Python
 
